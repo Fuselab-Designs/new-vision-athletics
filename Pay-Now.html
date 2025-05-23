@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pay Now – Newvision Athletics</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uto2lks.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            adobe: ['"peridot-pe-variable"', 'sans-serif'],
+          },
+          colors: {
+            brand: '#27f5f5',
+            dark: '#303636'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-adobe min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-dark text-brand px-4 py-4 flex items-center justify-between">
+    <div class="w-1/3 pl-4 md:pl-8">
+      <img src="https://assets.codepen.io/14601186/logo.svg" alt="Logo" class="h-10">
+    </div>
+
+    <nav class="hidden md:flex justify-center gap-16 w-1/3">
+      <a href="index.html#about" class="font-narrow-heavy tracking-[0.1em] hover:text-white">About</a>
+      <a href="index.html#features" class="font-narrow-heavy tracking-[0.1em] whitespace-nowrap hover:text-white">Training Plans</a>
+      <a href="index.html#testimonials" class="font-narrow-heavy tracking-[0.1em] hover:text-white">Testimonials</a>
+    </nav>
+
+    <div class="flex items-center justify-end w-1/3 pr-4 md:pr-8">
+      <a href="https://calendly.com/emerywilliams4/newvision-basketball-training" target="_blank" class="hidden md:inline-block uppercase px-[35.2px] py-[10px] border border-brand text-brand rounded-full shadow-[4px_6px_3.2px_rgba(39,245,245,0.6)] hover:bg-white hover:text-black hover:ring-2 hover:ring-brand">
+        Contact Us
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex flex-col items-center justify-start p-6 flex-grow">
+    <h1 class="text-3xl font-semibold mb-2 text-center">Secure Your Spot – Pay Before Class</h1>
+    <p class="text-center text-gray-600 mb-8 font-normal">Please pay using the Venmo option below. Payments are required before attending class.</p>
+
+    <div class="flex flex-col items-center">
+      <img src="Assets/Images/Venmo-QR.jpeg" alt="Venmo QR Code" class="w-48 h-48 mb-2">
+      <span class="text-lg font-medium text-blue-600">@NewvisionAthleticTraining</span>
+    </div>
+
+    <a href="https://calendly.com/emerywilliams4/newvision-basketball-training" class="mt-10 inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+      Return to Calendar
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-sm py-6 text-center mt-12">
+    <p>&copy; <span id="year"></span> Newvision Athletic Training LLC. All rights reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

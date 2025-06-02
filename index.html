@@ -42,10 +42,16 @@
   .fade-in-slow {
     animation: fadeInSlow 1.5s ease-out forwards;
   }
-
-  html {
+    html {
     scroll-padding-top: 80px;
     scroll-behavior: smooth;
+  }
+    
+    .delay-1 {
+    animation-delay: 0.6s;
+  }
+  .delay-2 {
+    animation-delay: 1.2s;
   }
 
   .sticky-header {
@@ -55,6 +61,24 @@
     background-color: #303636;
     color: #27f5f5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle depth on scroll */
+  }
+    @keyframes pulseSoft {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.95;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .pulse-button {
+    animation: pulseSoft 2.4s ease-in-out infinite;
   }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -79,7 +103,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-   <a href="https://calendly.com/emerywilliams4/newvision-basketball-training" target="_blank" class="hidden md:inline-block uppercase px-[35.2px] py-[10px] border border-[#27f5f5] text-[#27f5f5] rounded-full shadow-[4px_6px_3.2px_rgba(39,245,245,0.6)] hover:bg-white hover:text-black hover:ring-2 hover:ring-[#27f5f5]">
+   <a href="https://calendly.com/emerywilliams4/newvision-basketball-training" target="_blank" class="hidden md:inline-block uppercase px-[35.2px] py-[10px] border border-[#27f5f5] text-[#27f5f5] rounded-full shadow-[4px_6px_3.2px_rgba(39,245,245,0.6)] hover:bg-white hover:text-black hover:ring-2 hover:ring-[#27f5f5] fade-in-slow delay-2 pulse-button">
       Contact Us
     </a>
   </div>
@@ -105,18 +129,18 @@
   <span id="typed-hero" class="text-white"></span>
   
 </h1>
-    <h3 class="font-semibold text-lg md:text-2xl mt-4 max-w-[600px]">Helping young athletes grow on and off the court.</h3>
+    <h3 class="font-semibold text-lg md:text-2xl mt-4 max-w-[600px] fade-in-slow delay-1">Helping young athletes grow on and off the court.</h3>
    <div class="flex flex-col items-center">
   <a href="https://calendly.com/emerywilliams4/newvision-basketball-training" target="_blank"
      class="mt-8 uppercase font-narrow-heavy px-[45.76px] py-[10px]
             border border-[#27f5f5] text-[#27f5f5] rounded-full
             shadow-[4px_6px_3.2px_rgba(39,245,245,0.6)]
-            hover:bg-white hover:text-black hover:ring-2 hover:ring-[#27f5f5]">
+            hover:bg-white hover:text-black hover:ring-2 hover:ring-[#27f5f5] fade-in-slow delay-1">
     Book Now
   </a>
 
   <a href="/Pay-Now.html"
-     class="mt-4 text-sm text-[#27f5f5] hover:text-white inline-block text-center w-[220px]">
+     class="mt-4 text-sm text-[#27f5f5] hover:text-white inline-block text-center w-[220px] fade-in-slow delay-1">
     Already booked? Pay Now
   </a>
 </div>

@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.typekit.net/uto2lks.css">
   <title>New Vision Basketball Training | Coach Emery</title>
+  <meta name="description" content="Level up your game with Coach Emery at New Vision Athletics. We provide elite youth basketball training and mentorship programs across North and South Dakota. Train with purpose, on and off the court." />
+   <meta name="keywords" content="basketball training North Dakota, basketball training South Dakota, youth basketball coach, Coach Emery, New Vision Athletics, elite basketball program, athlete mentorship, youth sports development, basketball coaching near me, basketball trainer Dakota" />
+  <meta name="author" content="New Vision Athletics" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Cache-Control" content="max-age=31536000" />
+  <link rel="canonical" href="https://newvision-athletics.com/" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
   tailwind.config = {
@@ -81,7 +87,37 @@
     animation: pulseSoft 2.4s ease-in-out infinite;
   }
 </style>
+  <!-- Lazy load images -->
+  <style>
+    img[loading="lazy"] {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    img[loading="lazy"].loaded {
+      opacity: 1;
+    }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "New Vision Athletics",
+  "url": "https://newvision-athletics.com/"",
+  "logo": "https://assets.codepen.io/14601186/logo.svg",
+  "description": "Elite youth basketball training led by Coach Emery, serving athletes across North and South Dakota.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "ND",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "info@newvisionathletics.com"
+  }
+}
+</script>
 </head>
   <body class="m-0 p-0 bg-black text-white scroll-smooth">
 <!-- Header -->
@@ -103,9 +139,9 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-   <a href="https://calendly.com/emerywilliams4/newvision-basketball-training" target="_blank" class="hidden md:inline-block uppercase px-[35.2px] py-[10px] border border-[#27f5f5] text-[#27f5f5] rounded-full shadow-[4px_6px_3.2px_rgba(39,245,245,0.6)] hover:bg-white hover:text-black hover:ring-2 hover:ring-[#27f5f5] fade-in-slow delay-2 pulse-button">
-      Contact Us
-    </a>
+   <a href="javascript:void(0)" id="headerContactBtn" class="hidden md:inline-block uppercase px-[35.2px] py-[10px] border border-[#27f5f5] text-[#27f5f5] rounded-full shadow-[4px_6px_3.2px_rgba(39,245,245,0.6)] hover:bg-white hover:text-black hover:ring-2 hover:ring-[#27f5f5] fade-in-slow delay-2 pulse-button">
+  Contact Us
+</a>
   </div>
 </header>
   <!-- Mobile Nav (Right-Aligned Vertical List) -->

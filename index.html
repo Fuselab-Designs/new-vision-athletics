@@ -381,7 +381,7 @@
     </div>
   </footer>
 
- <script>
+  <script>
   document.addEventListener("DOMContentLoaded", function () {
     new Typed("#typed-hero", {
       strings: ["Train with a Purpose."],
@@ -413,6 +413,55 @@
       } else {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+    });
+  });
+</script>
+    <!-- Floating Contact Form -->
+<div id="floatingFormContainer" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-[rgba(0,0,0,0.6)] backdrop-blur-sm">
+  <form id="contactForm" 
+      action="https://usebasin.com/f/b5d29e21a683" 
+      method="POST"
+      class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl w-[90%] max-w-[500px] relative space-y-5 border-t-[6px] border-[#27f5f5] animate-fadeInSlow">
+    <button type="button" class="absolute top-4 right-4 text-black text-2xl" onclick="closeContactForm()">×</button>
+    <h3 class="text-xl font-semibold mb-4 text-center text-[#00B5E2]">Ready to Ball? Let’s Chat</h3>
+    <input type="text" name="Name" placeholder="Your Name" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#27f5f5] transition" />
+    <input type="email" name="Email" placeholder="Your Email" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#27f5f5] transition" />
+    <textarea name="Message" placeholder="Your Message..." rows="4" required class="w-full mb-4 px-4 py-2 border rounded"></textarea>
+    <button type="submit" class="w-full py-2 bg-[#00B5E2] text-white rounded hover:bg-[#009cc9]">Get in Touch</button>
+  </form>
+</div>
+    <script>
+  const floatingForm = document.getElementById('floatingFormContainer');
+  const form = document.getElementById('contactForm');
+  const headerTriggerBtn = document.getElementById('headerContactBtn');
+
+  // Open form on header button click
+  headerTriggerBtn.addEventListener('click', () => {
+    floatingForm.classList.remove('hidden');
+  });
+
+  // Close form function
+  function closeContactForm() {
+    floatingForm.classList.add('hidden');
+  }
+
+  // Handle form submission
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(() => {
+      form.innerHTML = `
+        <div class="text-center p-6">
+          <h3 class="text-xl text-[#00B5E2] mb-2">Thank You!</h3>
+          <p class="text-gray-700">We’ll reach out to you shortly.</p>
+        </div>`;
+    })
+    .catch(() => {
+      alert("There was an error. Please try again.");
     });
   });
 </script>
